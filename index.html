@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junri Pharmacy | Your Trusted Neighborhood Pharmacy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== ANNOUNCEMENT BAR ===== -->
+    <div class="announce-bar">
+      Free local delivery within our Nairobi delivery radius
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header class="navbar">
+      <a href="#home" class="logo">
+        <img src="image/logo.png" class="logo-img" alt="Junri Pharmacy logo" />
+      </a>
+
+      <div class="nav-center">
+        <div class="category-dropdown">
+          <button type="button" id="categoryToggle">
+            All Categories <span class="chevron">⌄</span>
+          </button>
+          <div class="category-menu" id="categoryMenu">
+            <a href="#shop">Skincare</a>
+            <a href="#shop">Wellness &amp; Supplements</a>
+            <a href="#shop">Prescription Medication</a>
+            <a href="#shop">Personal Care</a>
+          </div>
+        </div>
+
+        <form class="search-bar" id="searchForm" role="search">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search for medicines, health products"
+            aria-label="Search products"
+          />
+          <button type="submit" aria-label="Search">🔍</button>
+        </form>
+      </div>
+
+      <div class="nav-right">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Simara+Mall+Tom+Mboya+Nairobi+Kenya"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-location"
+        >
+          📍 <span>Simara Mall<br /><strong>Nairobi</strong></span>
+        </a>
+        <a href="#shop" class="nav-cart" aria-label="View products">🛒</a>
+        <a href="#contact" class="btn btn-primary nav-cta"
+          >Contact Pharmacist</a
+        >
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQs</a>
+        <a href="#hours">Hours &amp; Location</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Community Pharmacy · Nairobi</p>
+        <h1>Your Trusted<br />Neighborhood<br />Pharmacy</h1>
+        <p class="hero-sub">
+          Prescriptions, wellness products, and honest advice from a pharmacist
+          who knows your name — with free local delivery across Nairobi.
+        </p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-primary">Shop Now</a>
+          <a href="#services" class="btn btn-ghost">Explore Services</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-dot"></span>
+          TRUSTED BY 1,000+ CUSTOMERS
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="210" cy="210" r="190" fill="var(--sage-light)" />
+          <circle
+            cx="210"
+            cy="210"
+            r="150"
+            fill="var(--forest)"
+            opacity="0.06"
+          />
+          <!-- mortar -->
+          <path
+            d="M110 250 Q210 320 310 250 L295 300 Q210 340 125 300 Z"
+            fill="var(--forest)"
+          />
+          <ellipse cx="210" cy="250" rx="100" ry="22" fill="var(--sage)" />
+          <!-- pestle -->
+          <rect
+            x="235"
+            y="120"
+            width="26"
+            height="120"
+            rx="13"
+            fill="var(--amber)"
+            transform="rotate(18 248 180)"
+          />
+          <ellipse
+            cx="278"
+            cy="130"
+            rx="20"
+            ry="16"
+            fill="var(--amber-dark)"
+            transform="rotate(18 278 130)"
+          />
+          <!-- pills -->
+          <rect
+            x="120"
+            y="150"
+            width="46"
+            height="22"
+            rx="11"
+            fill="#fff"
+            stroke="var(--forest)"
+            stroke-width="3"
+          />
+          <rect
+            x="143"
+            y="150"
+            width="23"
+            height="22"
+            rx="11"
+            fill="var(--sage)"
+          />
+          <circle cx="160" cy="110" r="14" fill="var(--amber)" />
+          <circle cx="150" cy="95" r="8" fill="var(--sage)" />
+          <circle cx="290" cy="190" r="10" fill="var(--forest)" />
+          <!-- cross badge -->
+          <circle cx="310" cy="90" r="34" fill="var(--forest)" />
+          <rect x="298" y="72" width="24" height="36" rx="4" fill="#fff" />
+          <rect x="292" y="78" width="36" height="24" rx="4" fill="#fff" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== SHOP BY CATEGORY ===== -->
+    <section class="section category-section">
+      <p class="eyebrow center">Browse</p>
+      <h2 class="center">Shop by Category</h2>
+      <div class="category-tiles">
+        <a href="#shop" class="category-tile">
+          <span class="tile-icon" style="background: var(--sage-light)"
+            >🧴</span
+          >
+          <span>Skincare</span>
+        </a>
+        <a href="#shop" class="category-tile">
+          <span class="tile-icon" style="background: #fdebd3">💊</span>
+          <span>Wellness &amp; Supplements</span>
+        </a>
+        <a href="#shop" class="category-tile">
+          <span class="tile-icon" style="background: #e7eafd">℞</span>
+          <span>Prescription Medication</span>
+        </a>
+        <a href="#shop" class="category-tile">
+          <span class="tile-icon" style="background: #dcf6e9">🧼</span>
+          <span>Personal Care</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== SHOP — products ===== -->
+    <section id="shop" class="section shop">
+      <p class="eyebrow center">Shop Our Products</p>
+      <h2 class="center">Over-the-counter &amp; wellness</h2>
+
+      <div class="product-grid" id="productGrid">
+        <div
+          class="product-card"
+          data-name="tretinoin gel 0.1% a-ret acne retinoid"
+        >
+          <img
+            src="image/tretinion.png"
+            alt="Tretinoin Gel USP 0.1% w/w, A-Ret Gel, 20g"
+            class="product-img"
+          />
+          <div class="product-body">
+            <span class="product-tag">Ksh 1500</span>
+            <h3>Tretinoin Gel 0.1%</h3>
+            <p>
+              Tretinoin gel 0.1% is the maximum prescription-strength topical
+              retinoid primarily used to treat severe, stubborn acne and
+              advanced photoaging. The gel formulation is lightweight, absorbs
+              quickly, and is highly beneficial for oily or acne-prone skin
+              types.
+            </p>
+            <a
+              href="https://junripharmacy.myshopify.com/products/tretinoin-gel-0-1"
+              class="btn btn-primary buy-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="azelaic acid gel 20% ezanic skin tone acne"
+        >
+          <img
+            src="image/products/azelaic-acid-gel.jpg"
+            alt="Azelaic Acid Gel 20% w/w, Ezanic, 15g"
+            class="product-img"
+          />
+          <div class="product-body">
+            <span class="product-tag">15g</span>
+            <h3>Azelaic Acid Gel 20%</h3>
+            <p>
+              Ezanic 20% Gel. A high-strength topical treatment containing
+              Azelaic Acid. It is highly effective for clearing stubborn acne,
+              fading dark spots (hyperpigmentation and melasma), and reducing
+              facial redness caused by rosacea.
+            </p>
+            <a
+              href="https://junripharmacy.myshopify.com/products/azelaic-acid-gel-20"
+              class="btn btn-primary buy-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="evisoft cream moisturising vitamin e aloevera"
+        >
+          <img
+            src="image/Evisoft Cream.jpg"
+            alt="EviSoft Skin Moisturising Cream with Vitamin E and Aloevera, 50g"
+            class="product-img"
+          />
+          <div class="product-body">
+            <span class="product-tag">50g</span>
+            <h3>EviSoft Moisturising Cream</h3>
+            <p>Enriched with Vitamin E and aloe vera for daily hydration.</p>
+            <a
+              href="https://junripharmacy.myshopify.com/products/evisoft-cream"
+              class="btn btn-primary buy-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <div class="product-card" data-name="islim wellness">
+          <img
+            src="image/products/islim.jpg"
+            alt="Islim wellness product box"
+            class="product-img"
+          />
+          <div class="product-body">
+            <span class="product-tag">1 Box</span>
+            <h3>Islim</h3>
+            <p>Ask our pharmacist for full ingredient and usage details.</p>
+            <a
+              href="https://junripharmacy.myshopify.com/products/islim"
+              class="btn btn-primary buy-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="product-card"
+          data-name="cran max pro cranberry extract probiotic urinary"
+        >
+          <img
+            src="image/Cran Max.jpg"
+            alt="Cran Max Pro Cranberry Extract with Probiotic, 12 pouches"
+            class="product-img"
+          />
+          <div class="product-body">
+            <span class="product-tag">12 Pouches</span>
+            <h3>Cran Max Pro</h3>
+            <p>
+              Cranberry extract with probiotic Bacillus Coagulans &amp;
+              turmeric.
+            </p>
+            <a
+              href="https://junripharmacy.myshopify.com/products/cran-max-pro"
+              class="btn btn-primary buy-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </div>
+      <p class="no-results" id="noResults" hidden>
+        No products match your search.
+      </p>
+      <div id="shopify-shop-container" class="shop-grid"></div>
+    </section>
+
+    <!-- ===== PAYMENT & DELIVERY ===== -->
+    <section id="payment" class="section payment">
+      <p class="eyebrow center">Payments &amp; Delivery</p>
+      <h2 class="center">How you'll pay and receive your order</h2>
+
+      <div class="payment-grid">
+        <div class="info-card">
+          <h3>Accepted Payment Methods</h3>
+          <ul class="payment-methods">
+            <li><span class="pay-badge">M-Pesa</span> via Pesapal</li>
+            <li><span class="pay-badge">Airtel Money</span> via Pesapal</li>
+            <li>
+              <span class="pay-badge">Visa Card</span> via Pesapal e-wallet
+            </li>
+          </ul>
+          <p class="muted">
+            All payments are processed securely through Pesapal at checkout —
+            Junri Pharmacy never sees or stores your card or mobile money
+            details.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Delivery Details</h3>
+          <ul class="delivery-list">
+            <li>
+              <span>Local delivery</span
+              ><span>Free within delivery radius</span>
+            </li>
+            <li>
+              <span>Delivery time</span
+              ><span>Same-day for orders before 4:00 PM</span>
+            </li>
+            <li>
+              <span>Store pickup</span
+              ><span>Simara Mall, Basement floor shop LS57</span>
+            </li>
+          </ul>
+          <p class="muted">
+            Prescription items may require ID verification at pickup or
+            delivery, per pharmacy regulations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section about">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="eyebrow">About Us</p>
+          <h2>Meet Junri CEO: Dr June Muchira.</h2>
+          <p>
+            Junri Pharmacy was opened by Dr. June Muchira who believed a
+            prescription is more than a label — it's a conversation. We take the
+            time to explain what you're taking, why it matters, and how it fits
+            into the rest of your care. Every order that leaves our counter is
+            checked twice and handed over by someone who knows your history.
+          </p>
+          <p>
+            Whether you're picking up a routine refill or navigating a new
+            diagnosis, our team is here to make the pharmacy the easiest part of
+            your day.
+          </p>
+        </div>
+        <div class="about-quote">
+          <p>
+            &ldquo;Good pharmacy care is quiet. You only notice it when it's
+            missing.&rdquo;
+          </p>
+          <span>— The Junri Pharmacy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section services">
+      <p class="eyebrow center">What We Offer</p>
+      <h2 class="center">Our Pharmaceutical Services</h2>
+
+      <div class="service-grid">
+        <div class="info-card service-card">
+          <span class="service-icon">💊</span>
+          <h3>Prescription Dispensing</h3>
+          <p>Accurate preparation and dispensing of prescribed medications.</p>
+        </div>
+        <div class="info-card service-card">
+          <span class="service-icon">🩹</span>
+          <h3>Over-the-Counter Services</h3>
+          <p>
+            Suitable non-prescription medicines for common health conditions.
+          </p>
+        </div>
+        <div class="info-card service-card">
+          <span class="service-icon">📋</span>
+          <h3>Medication Therapy Management</h3>
+          <p>
+            Optimizing medication use and identifying potential drug
+            interactions.
+          </p>
+        </div>
+        <div class="info-card service-card">
+          <span class="service-icon">🩺</span>
+          <h3>Health Screenings</h3>
+          <p>
+            Blood pressure, glucose, and cholesterol checks — results while you
+            wait.
+          </p>
+        </div>
+        <div class="info-card service-card">
+          <span class="service-icon">🗣️</span>
+          <h3>Patient Counselling</h3>
+          <p>
+            Guidance on medication use, dosage, precautions, and side effects.
+          </p>
+        </div>
+        <div class="info-card service-card">
+          <span class="service-icon">🚚</span>
+          <h3>Free Local Delivery</h3>
+          <p>Prescriptions brought to your door within our delivery radius.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section faq">
+      <p class="eyebrow center">Questions</p>
+      <h2 class="center">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Do you accept insurance?</summary>
+          <p>
+            Yes, we work with most major insurance providers. Bring your card
+            and prescription and we'll confirm coverage at the counter.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            Can I transfer my prescription from another pharmacy?
+          </summary>
+          <p>
+            Absolutely. Bring your current prescription bottle or ask us to call
+            your previous pharmacy directly — we'll handle the transfer for you.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer free delivery?</summary>
+          <p>
+            Yes, we offer free local delivery within our delivery radius. Ask at
+            checkout or when placing your order by phone.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            Do I need a prescription for everything in your shop?
+          </summary>
+          <p>
+            No. Items like EviSoft Cream and Islim are available over the
+            counter. Products such as Tretinoin Gel require a valid prescription
+            — our pharmacist can advise you.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>What are your operating hours?</summary>
+          <p>
+            Monday–Friday 10:00 AM–8:00 PM, Saturday 9:00 AM–6:00 PM, and we're
+            closed on Sundays.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>How can I reach the pharmacist directly?</summary>
+          <p>
+            Call us at +254701467309 or email junripharmacy@gmail.com — we're
+            happy to answer medication questions over the phone.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== HOURS & LOCATION ===== -->
+    <section id="hours" class="section hours">
+      <div class="info-card hours-card">
+        <div class="hours-grid">
+          <div>
+            <h3>Store Hours</h3>
+            <ul class="hours-list">
+              <li><span>Mon–Fri</span><span>10:00 AM – 8:00 PM</span></li>
+              <li><span>Saturday</span><span>9:00 AM – 6:00 PM</span></li>
+              <li><span>Sunday</span><span>Closed</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Find Us</h3>
+            <p class="address">
+              Simara Mall, Basement floor shop LS57: Tom Mboya<br />
+              Nairobi, Kenya
+            </p>
+            <p class="address">
+              Tel: +254701467309<br />
+              Email: junripharmacy@gmail.com
+            </p>
+            <a
+              class="btn btn-ghost map-link"
+              href="https://www.google.com/maps/search/?api=1&query=Simara+Mall+Tom+Mboya+Nairobi+Kenya"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View on Google Maps</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact">
+      <p class="eyebrow center">Get in Touch</p>
+      <h2 class="center">Questions about a prescription?</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <textarea
+          name="message"
+          placeholder="How can we help?"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <img src="image/logo.png" class="footer-logo" alt="Junri Pharmacy logo" />
+      <p>&copy; 2026 Junri Pharmacy. All rights reserved.</p>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://sdks.shopifycdn.com/buy-button/latest/buybutton.umd.min.js"
+    ></script>
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>
