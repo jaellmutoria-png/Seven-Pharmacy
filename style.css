@@ -770,6 +770,51 @@ textarea:focus {
 }
 
 /* Footer */
+/* WhatsApp floating button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  z-index: 200;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+}
+.whatsapp-btn svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 640px) {
+  .whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 18px;
+    right: 18px;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--forest-dark);
+  color: var(--sage);
+  font-size: 0.85rem;
+}
+.footer-logo {
+  height: 26px;
+  margin-bottom: 0.75rem;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+/* Footer */
 .footer {
   text-align: center;
   padding: 2.5rem 2rem;
