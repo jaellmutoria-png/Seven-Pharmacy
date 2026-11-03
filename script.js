@@ -36,7 +36,7 @@ const form = document.getElementById("contactForm");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   alert(
-    "Thanks for reaching out! Junri Pharmacy will get back to you shortly.",
+    "Thanks for reaching out!   Seven Pharmacy will get back to you shortly.",
   );
   form.reset();
 });
